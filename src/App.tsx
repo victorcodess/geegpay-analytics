@@ -2,6 +2,7 @@ import "./index.css";
 import Navbar from "./components/navbar";
 import Sidebar from "./components/sidebar";
 import BarChart from "./components/bar-chart";
+import StatsCard from "./components/stats-cards";
 
 function App() {
   return (
@@ -10,10 +11,10 @@ function App() {
       <div className="h-[100vh] w-[100%]">
         <Navbar />
 
-        <section className="flex p-5 w-full bg-[#FAFAFA]">
+        <section className="flex flex-col gap-[24px] lg:gap-[20px] lg:flex-row p-5 w-full bg-[#FAFAFA]">
           <BarChart />
 
-          <div></div>
+          <StatsCard />
         </section>
       </div>
     </main>
