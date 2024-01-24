@@ -2,7 +2,7 @@ import profile from "../assets/profile.jpeg";
 
 const Navbar = () => {
   return (
-    <nav className="px-[18px] py-[18px] border border-b border-[#E5EAEF] flex items-center justify-between">
+    <nav className="px-[18px] py-[18px] border border-b border-[#E5EAEF] flex items-center justify-between w-full">
       <h1 className="text-lg lg:text-xl font-semibold cursor-pointer">
         Dashboard
       </h1>
@@ -23,7 +23,7 @@ const Navbar = () => {
           />
         </div>
 
-        <div className="gap-2.5 hidden lg:flex">
+        <div className="gap-2.5 hidden lg:flex px-[16px] py-[12px]">
           {/* prettier-ignore */}
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
             <path d="M2 9.79483C2 6.70067 2 5.15318 2.9376 4.19236C3.8744 3.23071 5.3832 3.23071 8.4 3.23071H11.6C14.6168 3.23071 16.1256 3.23071 17.0624 4.19236C18 5.15318 18 6.70067 18 9.79483V11.4359C18 14.53 18 16.0775 17.0624 17.0383C16.1256 18 14.6168 18 11.6 18H8.4C5.3832 18 3.8744 18 2.9376 17.0383C2 16.0775 2 14.53 2 11.4359V9.79483Z" stroke="black" stroke-width="1.37144"/>
