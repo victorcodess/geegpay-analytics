@@ -12,6 +12,8 @@ function App() {
 
         <section className="flex p-5 w-full bg-[#FAFAFA]">
           <BarChart />
+
+          <div></div>
         </section>
       </div>
     </main>

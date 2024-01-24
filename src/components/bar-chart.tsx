@@ -1,5 +1,3 @@
-import React from "react";
-
 const BarChart = () => {
   return (
     <div className="bg-white border rounded-[14px] border-[#EDF2F7]">
@@ -52,7 +50,18 @@ const BarChart = () => {
               <div className="w-[20px] lg:w-[30px] h-[40px] bg-[#34CAA51A] rounded-t-[20px]"></div>
               <div className="w-[20px] lg:w-[30px] h-[161px] bg-[#34CAA51A] rounded-t-[20px]"></div>
               <div className="w-[20px] lg:w-[30px] h-[81px] bg-[#34CAA51A] rounded-t-[20px]"></div>
-              <div className="w-[20px] lg:w-[30px] h-[216px] linear-bg rounded-t-[20px]"></div>
+              <div className="w-[20px] relative lg:w-[30px] h-[216px] linear-bg rounded-t-[20px] flex items-center justify-center">
+                <div className="absolute top-[-35px] flex items-center justify-center ">
+                  {/* prettier-ignore */}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="80" height="32" viewBox="0 0 80 32" fill="none" className="drop-shadow-[2px_4px_8px_rgba(0,0,0,0.1)]">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5C0 2.23858 2.23858 0 5 0H75C77.7614 0 80 2.23858 80 5V21C80 23.7614 77.7614 26 75 26L46 26L40 31.9771L34 26L5 26C2.23858 26 0 23.7614 0 21V5Z" fill="#090C2C"/>
+                </svg>
+                  <h5 className="absolute text-white text-xs font-semibold pb-[5px]">
+                    $45.000
+                  </h5>
+                </div>
+              </div>
+
               <div className="w-[20px] lg:w-[30px] h-[81px] bg-[#34CAA51A] rounded-t-[20px]"></div>
               <div className="w-[20px] lg:w-[30px] h-[131px] bg-[#34CAA51A] rounded-t-[20px]"></div>
               <div className="w-[20px] lg:w-[30px] h-[182px] bg-[#34CAA51A] rounded-t-[20px]"></div>
@@ -67,15 +76,15 @@ const BarChart = () => {
           <div className="text-[#525252] text-xs lg:text-sm flex font-semibold w-[360px] lg:w-[696px] items-center justify-between">
             <h5>Jan</h5>
             <h5>Feb</h5>
-            <h5>Mar</h5>
+            <h5 className="mr-[-4px]">Mar</h5>
             <h5>Apr</h5>
             <h5>May</h5>
             <h5>Jun</h5>
             <h5>Jul</h5>
-            <h5>Aug</h5>
+            <h5 className="mr-[-4px]">Aug</h5>
             <h5>Sep</h5>
             <h5>Oct</h5>
-            <h5>Nov</h5>
+            <h5 className="mr-[-4px]">Nov</h5>
             <h5>Dec</h5>
           </div>
         </div>
