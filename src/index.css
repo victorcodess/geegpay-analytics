@@ -12,3 +12,7 @@ body {
 .inter {
   font-family: "Inter", sans-serif;
 }
+
+.linear-bg {
+  background: linear-gradient(180deg, #34caa5 0%, rgba(52, 202, 165, 0) 100%);
+}
