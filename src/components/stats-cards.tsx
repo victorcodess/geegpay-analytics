@@ -2,9 +2,9 @@
 const StatsCard = () => {
   return (
     <div className="grid w-full max-w-[1200px] grid-cols-1 grid-rows-4 place-content-center place-items-center gap-x-4 gap-y-4 lg:grid-cols-2 lg:grid-rows-2">
-      <div className="bg-white border flex flex-col rounded-[14px] border-[#EDF2F7] w-full p-4 gap-2.5">
+      <div className="bg-white dark:bg-[#0D0D0D] border flex flex-col rounded-[14px] border-[#EDF2F7] dark:border-[#1A1A1A] w-full p-4 gap-2.5">
         <div className="flex w-full justify-between items-center">
-          <div className="border border-[#DADDDD] flex items-center justify-center rounded-full w-10 h-10">
+          <div className="border border-[#DADDDD] dark:border-[#262626] flex items-center justify-center rounded-full w-10 h-10">
             {/* prettier-ignore */}
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g id="vuesax/bulk/box-tick">
@@ -57,9 +57,9 @@ const StatsCard = () => {
         </div>
       </div>
 
-      <div className="bg-white border flex flex-col rounded-[14px] border-[#EDF2F7] w-full p-4 gap-2.5">
+      <div className="bg-white dark:bg-[#0D0D0D] border flex flex-col rounded-[14px] border-[#EDF2F7] dark:border-[#1A1A1A] w-full p-4 gap-2.5">
         <div className="flex w-full justify-between items-center">
-          <div className="border border-[#DADDDD] flex items-center justify-center rounded-full w-10 h-10">
+          <div className="border border-[#DADDDD] dark:border-[#262626] flex items-center justify-center rounded-full w-10 h-10">
             {/* prettier-ignore */}
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g id="vuesax/bulk/3d-rotate">
@@ -116,9 +116,9 @@ const StatsCard = () => {
         </div>
       </div>
 
-      <div className="bg-white border flex flex-col rounded-[14px] border-[#EDF2F7] w-full p-4 gap-2.5">
+      <div className="bg-white dark:bg-[#0D0D0D] border flex flex-col rounded-[14px] border-[#EDF2F7] dark:border-[#1A1A1A] w-full p-4 gap-2.5">
         <div className="flex w-full justify-between items-center">
-          <div className="border border-[#DADDDD] flex items-center justify-center rounded-full w-10 h-10">
+          <div className="border border-[#DADDDD] dark:border-[#262626] flex items-center justify-center rounded-full w-10 h-10">
             {/* prettier-ignore */}
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g id="vuesax/bulk/shopping-cart">
@@ -171,9 +171,9 @@ const StatsCard = () => {
         </div>
       </div>
 
-      <div className="bg-white border flex flex-col rounded-[14px] border-[#EDF2F7] w-full p-4 gap-2.5">
+      <div className="bg-white dark:bg-[#0D0D0D] border flex flex-col rounded-[14px] border-[#EDF2F7] dark:border-[#1A1A1A] w-full p-4 gap-2.5">
         <div className="flex w-full justify-between items-center">
-          <div className="border border-[#DADDDD] flex items-center justify-center rounded-full w-10 h-10">
+          <div className="border border-[#DADDDD] dark:border-[#262626] flex items-center justify-center rounded-full w-10 h-10">
             {/* prettier-ignore */}
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g id="vuesax/bulk/coin">

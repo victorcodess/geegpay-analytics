@@ -16,3 +16,7 @@ body {
 .linear-bg {
   background: linear-gradient(180deg, #34caa5 0%, rgba(52, 202, 165, 0) 100%);
 }
+
+* {
+  transition: all 0.5s ease;
+}
