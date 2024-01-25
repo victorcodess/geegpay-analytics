@@ -1,6 +1,6 @@
 const Sidebar = () => {
   return (
-    <div className="h-[100vh] hidden lg:flex py-5 bg-[#F7F8FA] border border-[#EBECF2] flex-col items-center justify-between gap-[28px]">
+    <div className="h-[100vh] fixed hidden lg:flex py-5 bg-[#F7F8FA] border border-[#EBECF2] flex-col items-center justify-between gap-[28px]">
       <div className="flex flex-col gap-5">
         <div className="px-5 cursor-pointer">
           {/* prettier-ignore */}

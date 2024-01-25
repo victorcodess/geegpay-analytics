@@ -22,7 +22,7 @@ const BarChart = () => {
 
       <div className="flex flex-col gap-[12px] pb-[16px]">
         <div className="px-[20px] flex gap-6 items-center justify-center">
-          <div className="h-[255px] w-full text-[#525252] text-xs lg:text-sm flex flex-col font-semibold justify-between">
+          <div className="h-[255px] w-fit text-[#525252] text-xs lg:text-xs flex flex-col font-semibold justify-between">
             <h5>50.000</h5>
             <h5>40.000</h5>
             <h5>30.000</h5>
@@ -33,16 +33,16 @@ const BarChart = () => {
           </div>
 
           <div className="relative w-full h-[255px] items-center justify-between flex flex-col gap-[27.22px]">
-            <div className="w-[360px] lg:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
-            <div className="w-[360px] lg:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
-            <div className="w-[360px] lg:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
-            <div className="w-[360px] lg:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
-            <div className="w-[360px] lg:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
-            <div className="w-[360px] lg:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
-            <div className="w-[360px] lg:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
-            <div className="w-[360px] lg:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
-            <div className="w-[360px] lg:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
-            <div className="w-[360px] lg:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
+            <div className="w-full lg:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
+            <div className="w-full lg:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
+            <div className="w-full lg:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
+            <div className="w-full lg:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
+            <div className="w-full lg:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
+            <div className="w-full lg:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
+            <div className="w-full lg:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
+            <div className="w-full lg:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
+            <div className="w-full lg:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
+            <div className="w-full lg:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
 
             <div className="absolute z-20 bottom-0 w-full flex gap-[8px] lg:gap-[30px] justify-between items-end">
               <div className="w-[20px] lg:w-[30px] h-[68px] bg-[#34CAA51A] rounded-t-[20px]"></div>
@@ -72,8 +72,11 @@ const BarChart = () => {
           </div>
         </div>
 
-        <div className="w-full flex justify-end px-[20px]">
-          <div className="text-[#525252] text-xs lg:text-sm flex font-semibold w-[360px] lg:w-[696px] items-center justify-between">
+        <div className="w-full flex justify-between px-[20px] gap-[23px] lg:gap-[12px]">
+          <h5 className="w-fit text-[#525252] border text-xs lg:text-xs flex flex-col font-semibold justify-between opacity-0">
+            50.000
+          </h5>
+          <div className="text-[#525252] text-xs lg:text-sm flex font-semibold w-full lg:w-[696px] items-center justify-between">
             <h5>Jan</h5>
             <h5>Feb</h5>
             <h5 className="mr-[-4px]">Mar</h5>
