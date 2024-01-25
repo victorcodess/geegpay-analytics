@@ -32,7 +32,7 @@ const StatsCard = () => {
         </div>
 
         <div className="flex flex-col gap-[5px]">
-          <h2 className="text-[#898989] font-medium text-lg leading-[26px]">
+          <h2 className="text-[#898989] font-medium  text-md lg:text-lg  leading-[26px]">
             Total Order
           </h2>
           <h1 className="font-semibold text-[#3A3F51] text-2xl leading-[32px]">
@@ -91,7 +91,7 @@ const StatsCard = () => {
         </div>
 
         <div className="flex flex-col gap-[5px]">
-          <h2 className="text-[#898989] font-medium text-lg leading-[26px]">
+          <h2 className="text-[#898989] font-medium  text-md lg:text-lg  leading-[26px]">
             Total Refund
           </h2>
           <h1 className="font-semibold text-[#3A3F51] text-2xl leading-[32px]">
@@ -146,7 +146,7 @@ const StatsCard = () => {
         </div>
 
         <div className="flex flex-col gap-[5px]">
-          <h2 className="text-[#898989] font-medium text-lg leading-[26px]">
+          <h2 className="text-[#898989] font-medium  text-md lg:text-lg  leading-[26px]">
             Average Sales
           </h2>
           <h1 className="font-semibold text-[#3A3F51] text-2xl leading-[32px]">
@@ -200,7 +200,7 @@ const StatsCard = () => {
         </div>
 
         <div className="flex flex-col gap-[5px]">
-          <h2 className="text-[#898989] font-medium text-lg leading-[26px]">
+          <h2 className="text-[#898989] font-medium  text-md lg:text-lg  leading-[26px]">
             Total Income
           </h2>
           <h1 className="font-semibold text-[#3A3F51] text-2xl leading-[32px]">

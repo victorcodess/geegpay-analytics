@@ -2,7 +2,7 @@ import profile from "../assets/profile.jpeg";
 
 const Navbar = () => {
   return (
-    <nav className="px-[18px] py-[18px] border border-b border-[#E5EAEF] flex items-center justify-between w-full">
+    <nav className="px-[18px] z-40 fixed bg-[#FAFAFA] py-[18px] border border-b border-[#E5EAEF] flex items-center justify-between w-full lg:pr-[99px]">
       <h1 className="text-lg lg:text-xl font-semibold cursor-pointer">
         Dashboard
       </h1>
