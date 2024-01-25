@@ -33,7 +33,7 @@ const Navbar = () => {
             </div>
             <input
               type="text"
-              className="block w-[333px] p-3 ps-10 text-base text-[#A3A3A3] border border-[#DADDDD] rounded-[24px] bg-white placeholder:text-[#A3A3A3]"
+              className="block w-[250px] xl:w-[333px] p-3 ps-10 text-base text-[#A3A3A3] border border-[#DADDDD] rounded-[24px] bg-white placeholder:text-[#A3A3A3]"
               placeholder="Search..."
               required
             />

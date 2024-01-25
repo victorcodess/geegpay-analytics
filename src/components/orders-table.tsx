@@ -6,12 +6,12 @@ import phillip from "../assets/phillip.jpeg";
 const OrdersTable = () => {
   return (
     <div className="bg-white border rounded-[14px] border-[#EDF2F7] pt-[18px] pb-[31px] px-[20px] flex gap-[14px] flex-col w-full lg:w-fit h-fit">
-      <div className="flex items-center justify-between lg:w-[766px]">
+      <div className="flex items-center justify-between lg:w-[520px] xl:w-[766px]">
         <h2 className="text-[#26282C] text-md lg:text-lg  font-semibold">Last Orders</h2>
         <h2 className="text-[#34CAA5] text-md lg:text-lg  font-medium cursor-pointer">See All</h2>
       </div>
 
-      <div className="w-full overflow-hidden overflow-y-auto overflow-x-auto">
+      <div className="w-full md:flex items-center justify-center overflow-hidden overflow-y-auto overflow-x-auto sm:w-full lg:w-[520px] xl:w-full">
         <div className="flex items-center justify-center w-[766px] lg:w-full">
           <table className="w-full lg:w-[766px] text-sm text-left text-gray-500 overflow-x-auto overflow-clip">
             <thead className="text-xxs font-bold text-gray-700 border-b border-[#EDF2F6] bg-transparent ">
@@ -57,7 +57,7 @@ const OrdersTable = () => {
                       alt=""
                       className="w-[32px] h-[32px] rounded-full justify-center object-cover bg-cover bg-center"
                     />
-                    <p className="text-[#3A3F51] font-medium text-base">
+                    <p className="text-[#3A3F51] font-medium text-base line-clamp-1 break-all">
                       Marcus Bergson
                     </p>
                   </div>
@@ -97,7 +97,7 @@ const OrdersTable = () => {
                       alt=""
                       className="w-[32px] h-[32px] rounded-full justify-center object-cover bg-cover bg-center"
                     />
-                    <p className="text-[#3A3F51] font-medium text-base">
+                    <p className="text-[#3A3F51] font-medium text-base line-clamp-1 break-all">
                       Jaydon Vaccaro
                     </p>
                   </div>
@@ -139,7 +139,7 @@ const OrdersTable = () => {
                       alt=""
                       className="w-[32px] h-[32px] rounded-full justify-center object-cover bg-cover bg-center"
                     />
-                    <p className="text-[#3A3F51] font-medium text-base">
+                    <p className="text-[#3A3F51] font-medium text-base line-clamp-1 break-all">
                       Corey Schleifer
                     </p>
                   </div>
@@ -179,7 +179,7 @@ const OrdersTable = () => {
                       alt=""
                       className="w-[32px] h-[32px] rounded-full justify-center object-cover bg-cover bg-center"
                     />
-                    <p className="text-[#3A3F51] font-medium text-base">
+                    <p className="text-[#3A3F51] font-medium text-base line-clamp-1 break-all">
                       Cooper Press
                     </p>
                   </div>
@@ -221,7 +221,7 @@ const OrdersTable = () => {
                       alt=""
                       className="w-[32px] h-[32px] rounded-full justify-center object-cover bg-cover bg-center"
                     />
-                    <p className="text-[#3A3F51] font-medium text-base">
+                    <p className="text-[#3A3F51] font-medium text-base line-clamp-1 break-all">
                       Phillip Lubin
                     </p>
                   </div>

@@ -1,6 +1,6 @@
 const MobileSidebar = () => {
   return (
-    <div className="h-[100vh] w-[300px] fixed flex py-5 bg-[#F7F8FA] border border-[#EBECF2] flex-col items-start justify-between gap-[28px]">
+    <div className="h-[100vh] w-[300px] fixed flex py-5 bg-[#F7F8FA] flex-col items-start justify-between gap-[28px]">
       <div className="z-50 absolute top-5 right-5 flex gap-5">
         <div className="gap-2.5 flex px-[11px] py-[11px] border-[0.769px] cursor-pointer border-[#DADDDD] rounded-full">
           {/* prettier-ignore */}

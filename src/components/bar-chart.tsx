@@ -22,7 +22,7 @@ const BarChart = () => {
 
       <div className="flex flex-col gap-[12px] pb-[16px]">
         <div className="px-[20px] flex gap-6 items-center justify-center">
-          <div className="h-[255px] w-fit text-[#525252] text-xs lg:text-xs flex flex-col font-semibold justify-between">
+          <div className="h-[255px] w-fit text-[#525252] text-[10px] sm:text-xs lg:text-xs flex flex-col font-semibold justify-between">
             <h5>50.000</h5>
             <h5>40.000</h5>
             <h5>30.000</h5>
@@ -33,24 +33,24 @@ const BarChart = () => {
           </div>
 
           <div className="relative w-full h-[255px] items-center justify-between flex flex-col gap-[27.22px]">
-            <div className="w-full lg:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
-            <div className="w-full lg:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
-            <div className="w-full lg:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
-            <div className="w-full lg:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
-            <div className="w-full lg:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
-            <div className="w-full lg:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
-            <div className="w-full lg:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
-            <div className="w-full lg:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
-            <div className="w-full lg:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
-            <div className="w-full lg:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
+            <div className="w-full lg:w-[450px] xl:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
+            <div className="w-full lg:w-[450px] xl:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
+            <div className="w-full lg:w-[450px] xl:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
+            <div className="w-full lg:w-[450px] xl:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
+            <div className="w-full lg:w-[450px] xl:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
+            <div className="w-full lg:w-[450px] xl:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
+            <div className="w-full lg:w-[450px] xl:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
+            <div className="w-full lg:w-[450px] xl:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
+            <div className="w-full lg:w-[450px] xl:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
+            <div className="w-full lg:w-[450px] xl:w-[696px] h-[10px] border-b border-dashed border-[#EAEAEA]"></div>
 
-            <div className="absolute z-20 bottom-0 w-full flex gap-[8px] lg:gap-[30px] justify-between items-end">
-              <div className="w-[20px] lg:w-[30px] h-[68px] bg-[#34CAA51A] rounded-t-[20px]"></div>
-              <div className="w-[20px] lg:w-[30px] h-[120px] bg-[#34CAA51A] rounded-t-[20px]"></div>
-              <div className="w-[20px] lg:w-[30px] h-[40px] bg-[#34CAA51A] rounded-t-[20px]"></div>
-              <div className="w-[20px] lg:w-[30px] h-[161px] bg-[#34CAA51A] rounded-t-[20px]"></div>
-              <div className="w-[20px] lg:w-[30px] h-[81px] bg-[#34CAA51A] rounded-t-[20px]"></div>
-              <div className="w-[20px] relative lg:w-[30px] h-[216px] linear-bg rounded-t-[20px] flex items-center justify-center">
+<div className="absolute z-20 bottom-0 w-full flex gap-[8px] lg:gap-[30px] justify-between items-end">
+              <div className="w-[20px] md:w-[30px] h-[68px] bg-[#34CAA51A] rounded-t-[20px]"></div>
+              <div className="w-[20px] md:w-[30px] h-[120px] bg-[#34CAA51A] rounded-t-[20px]"></div>
+              <div className="w-[20px] md:w-[30px] h-[40px] bg-[#34CAA51A] rounded-t-[20px]"></div>
+              <div className="w-[20px] md:w-[30px] h-[161px] bg-[#34CAA51A] rounded-t-[20px]"></div>
+              <div className="w-[20px] md:w-[30px] h-[81px] bg-[#34CAA51A] rounded-t-[20px]"></div>
+              <div className="w-[20px] relative md:w-[30px] h-[216px] linear-bg rounded-t-[20px] flex items-center justify-center">
                 <div className="absolute top-[-35px] flex items-center justify-center ">
                   {/* prettier-ignore */}
                   <svg xmlns="http://www.w3.org/2000/svg" width="80" height="32" viewBox="0 0 80 32" fill="none" className="drop-shadow-[2px_4px_8px_rgba(0,0,0,0.1)]">
@@ -62,12 +62,12 @@ const BarChart = () => {
                 </div>
               </div>
 
-              <div className="w-[20px] lg:w-[30px] h-[81px] bg-[#34CAA51A] rounded-t-[20px]"></div>
-              <div className="w-[20px] lg:w-[30px] h-[131px] bg-[#34CAA51A] rounded-t-[20px]"></div>
-              <div className="w-[20px] lg:w-[30px] h-[182px] bg-[#34CAA51A] rounded-t-[20px]"></div>
-              <div className="w-[20px] lg:w-[30px] h-[51px] bg-[#34CAA51A] rounded-t-[20px]"></div>
-              <div className="w-[20px] lg:w-[30px] h-[171px] bg-[#34CAA51A] rounded-t-[20px]"></div>
-              <div className="w-[20px] lg:w-[30px] h-[151px] bg-[#34CAA51A] rounded-t-[20px]"></div>
+              <div className="w-[20px] md:w-[30px] h-[81px] bg-[#34CAA51A] rounded-t-[20px]"></div>
+              <div className="w-[20px] md:w-[30px] h-[131px] bg-[#34CAA51A] rounded-t-[20px]"></div>
+              <div className="w-[20px] md:w-[30px] h-[182px] bg-[#34CAA51A] rounded-t-[20px]"></div>
+              <div className="w-[20px] md:w-[30px] h-[51px] bg-[#34CAA51A] rounded-t-[20px]"></div>
+              <div className="w-[20px] md:w-[30px] h-[171px] bg-[#34CAA51A] rounded-t-[20px]"></div>
+              <div className="w-[20px] md:w-[30px] h-[151px] bg-[#34CAA51A] rounded-t-[20px]"></div>
             </div>
           </div>
         </div>
@@ -76,7 +76,7 @@ const BarChart = () => {
           <h5 className="w-fit text-[#525252] border text-xs lg:text-xs flex flex-col font-semibold justify-between opacity-0">
             50.000
           </h5>
-          <div className="text-[#525252] text-xs lg:text-sm flex font-semibold w-full lg:w-[696px] items-center justify-between">
+          <div className="text-[#525252] text-[10px] sm:text-xs md:text-sm flex font-semibold w-full lg:w-[450px] xl:w-[696px] items-center justify-between">
             <h5>Jan</h5>
             <h5>Feb</h5>
             <h5 className="mr-[-4px]">Mar</h5>
