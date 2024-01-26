@@ -10,7 +10,7 @@ const OrdersTable = () => {
         <h2 className="text-[#26282C] dark:text-[#D3D5D9] text-md lg:text-lg  font-semibold">
           Last Orders
         </h2>
-        <h2 className="text-[#34CAA5] text-md lg:text-lg  font-medium cursor-pointer">
+        <h2 className="text-[#34CAA5] underline-offset-4 hover:underline text-md lg:text-lg  font-medium cursor-pointer">
           See All
         </h2>
       </div>
@@ -81,7 +81,7 @@ const OrdersTable = () => {
                   <p className="line-clamp-1 text-[#34CAA5] text-base">Paid</p>
                 </td>
                 <td className="">
-                  <div className="flex gap-[6px] items-center cursor-pointer">
+                  <div className="flex gap-[6px] w-fit hover:underline underline-offset-4 items-center cursor-pointer">
                     {/* prettier-ignore */}
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                           <path className="fill-[#292D32] dark:fill-[#CDD1D6]" d="M6 11.8334C5.93333 11.8334 5.87333 11.82 5.80667 11.7934C5.62 11.72 5.5 11.5334 5.5 11.3334V7.33337C5.5 7.06004 5.72667 6.83337 6 6.83337C6.27333 6.83337 6.5 7.06004 6.5 7.33337V10.1267L6.98 9.64671C7.17333 9.45337 7.49333 9.45337 7.68667 9.64671C7.88 9.84004 7.88 10.16 7.68667 10.3534L6.35333 11.6867C6.26 11.78 6.12667 11.8334 6 11.8334Z"/>
@@ -123,7 +123,7 @@ const OrdersTable = () => {
                   </p>
                 </td>
                 <td className="">
-                  <div className="flex gap-[6px] items-center cursor-pointer">
+                  <div className="flex gap-[6px] w-fit hover:underline underline-offset-4 items-center cursor-pointer">
                     {/* prettier-ignore */}
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                           <path className="fill-[#292D32] dark:fill-[#CDD1D6]" d="M6 11.8334C5.93333 11.8334 5.87333 11.82 5.80667 11.7934C5.62 11.72 5.5 11.5334 5.5 11.3334V7.33337C5.5 7.06004 5.72667 6.83337 6 6.83337C6.27333 6.83337 6.5 7.06004 6.5 7.33337V10.1267L6.98 9.64671C7.17333 9.45337 7.49333 9.45337 7.68667 9.64671C7.88 9.84004 7.88 10.16 7.68667 10.3534L6.35333 11.6867C6.26 11.78 6.12667 11.8334 6 11.8334Z"/>
@@ -163,7 +163,7 @@ const OrdersTable = () => {
                   <p className="line-clamp-1 text-[#34CAA5] text-base">Paid</p>
                 </td>
                 <td className="">
-                  <div className="flex gap-[6px] items-center cursor-pointer">
+                  <div className="flex gap-[6px] w-fit hover:underline underline-offset-4 items-center cursor-pointer">
                     {/* prettier-ignore */}
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                           <path className="fill-[#292D32] dark:fill-[#CDD1D6]" d="M6 11.8334C5.93333 11.8334 5.87333 11.82 5.80667 11.7934C5.62 11.72 5.5 11.5334 5.5 11.3334V7.33337C5.5 7.06004 5.72667 6.83337 6 6.83337C6.27333 6.83337 6.5 7.06004 6.5 7.33337V10.1267L6.98 9.64671C7.17333 9.45337 7.49333 9.45337 7.68667 9.64671C7.88 9.84004 7.88 10.16 7.68667 10.3534L6.35333 11.6867C6.26 11.78 6.12667 11.8334 6 11.8334Z"/>
@@ -205,7 +205,7 @@ const OrdersTable = () => {
                   </p>
                 </td>
                 <td className="">
-                  <div className="flex gap-[6px] items-center cursor-pointer">
+                  <div className="flex gap-[6px] w-fit hover:underline underline-offset-4 items-center cursor-pointer">
                     {/* prettier-ignore */}
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                           <path className="fill-[#292D32] dark:fill-[#CDD1D6]" d="M6 11.8334C5.93333 11.8334 5.87333 11.82 5.80667 11.7934C5.62 11.72 5.5 11.5334 5.5 11.3334V7.33337C5.5 7.06004 5.72667 6.83337 6 6.83337C6.27333 6.83337 6.5 7.06004 6.5 7.33337V10.1267L6.98 9.64671C7.17333 9.45337 7.49333 9.45337 7.68667 9.64671C7.88 9.84004 7.88 10.16 7.68667 10.3534L6.35333 11.6867C6.26 11.78 6.12667 11.8334 6 11.8334Z"/>
@@ -245,7 +245,7 @@ const OrdersTable = () => {
                   <p className="line-clamp-1 text-[#34CAA5] text-base">Paid</p>
                 </td>
                 <td className="">
-                  <div className="flex gap-[6px] items-center cursor-pointer">
+                  <div className="flex gap-[6px] w-fit hover:underline underline-offset-4 items-center cursor-pointer">
                     {/* prettier-ignore */}
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                           <path className="fill-[#292D32] dark:fill-[#CDD1D6]" d="M6 11.8334C5.93333 11.8334 5.87333 11.82 5.80667 11.7934C5.62 11.72 5.5 11.5334 5.5 11.3334V7.33337C5.5 7.06004 5.72667 6.83337 6 6.83337C6.27333 6.83337 6.5 7.06004 6.5 7.33337V10.1267L6.98 9.64671C7.17333 9.45337 7.49333 9.45337 7.68667 9.64671C7.88 9.84004 7.88 10.16 7.68667 10.3534L6.35333 11.6867C6.26 11.78 6.12667 11.8334 6 11.8334Z"/>

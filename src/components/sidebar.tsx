@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const Sidebar = () => {
   function handleClick() {
     if (localStorage.theme === "dark" || !("theme" in localStorage)) {
@@ -35,15 +37,13 @@ const Sidebar = () => {
               <path className="fill-[#0D062D] dark:fill-[#D9D2F9]" opacity="0.4" d="M7.24 13.4301H5.34C3.15 13.4301 2 14.5801 2 16.7601V18.6601C2 20.8501 3.15 22.0001 5.33 22.0001H7.23C9.41 22.0001 10.56 20.8501 10.56 18.6701V16.7701C10.57 14.5801 9.42 13.4301 7.24 13.4301Z"/>
             </svg>
 
-
             {/* prettier-ignore */}
             <svg xmlns="http://www.w3.org/2000/svg" width="3" height="21" viewBox="0 0 3 21" fill="none" className="absolute right-0 top-0 bottom-0 my-auto">
               <path className="fill-[#0D062D] dark:fill-[#D9D2F9]" d="M6.53467e-06 3.02509C7.11773e-06 1.42129 1.40951 0.182713 3 0.388889V21C1.34315 21 4.88293e-07 19.6569 1.09063e-06 18L6.53467e-06 3.02509Z"/>
             </svg>
-
           </div>
 
-          <div className="py-[8px] cursor-pointer">
+          <div className="p-[8px] rounded-full hover:bg-[#B2ABAB]/20 cursor-pointer">
             {/* prettier-ignore */}
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M2 12.98V15C2 20 4 22 9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9" stroke="#B2ABAB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -53,7 +53,7 @@ const Sidebar = () => {
             </svg>
           </div>
 
-          <div className="py-[8px] cursor-pointer">
+          <div className="p-[8px] rounded-full hover:bg-[#B2ABAB]/20 cursor-pointer">
             {/* prettier-ignore */}
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M12.6801 3.96C13.1601 4.67 13.4401 5.52 13.4401 6.44C13.4301 8.84 11.5401 10.79 9.16006 10.87C9.06006 10.86 8.94006 10.86 8.83006 10.87C6.45006 10.79 4.56006 8.84 4.56006 6.44C4.56006 3.99 6.54006 2 9.00006 2" stroke="#B2ABAB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -63,7 +63,7 @@ const Sidebar = () => {
             </svg>
           </div>
 
-          <div className="py-[8px] cursor-pointer">
+          <div className="p-[8px] rounded-full hover:bg-[#B2ABAB]/20 cursor-pointer">
             {/* prettier-ignore */}
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M3.16992 7.44006L11.9999 12.55L20.7699 7.47003" stroke="#B7B0B0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -73,7 +73,7 @@ const Sidebar = () => {
             </svg>
           </div>
 
-          <div className="py-[8px] cursor-pointer">
+          <div className="p-[8px] rounded-full hover:bg-[#B2ABAB]/20 cursor-pointer">
             {/* prettier-ignore */}
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M14.6599 20.01L13.1399 21.53C12.5199 22.15 11.4999 22.15 10.8799 21.53L9.3599 20.01C9.0999 19.75 8.58992 19.54 8.22992 19.54H6.0799C5.1999 19.54 4.47992 18.8199 4.47992 17.9399V15.79C4.47992 15.43 4.26992 14.92 4.00992 14.66L2.4899 13.14C1.8699 12.52 1.8699 11.5 2.4899 10.88L4.00992 9.35999C4.26992 9.09999 4.47992 8.58998 4.47992 8.22998V6.07996C4.47992 5.19996 5.1999 4.47998 6.0799 4.47998" stroke="#B2ABAB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -84,7 +84,7 @@ const Sidebar = () => {
             </svg>
           </div>
 
-          <div className="py-[8px] cursor-pointer">
+          <div className="p-[8px] rounded-full hover:bg-[#B2ABAB]/20 cursor-pointer">
             {/* prettier-ignore */}
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M12 8V13" stroke="#B2ABAB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -93,7 +93,11 @@ const Sidebar = () => {
             </svg>
           </div>
 
-          <div className="bg-white dark:bg-[#0D0D0D] flex flex-col items-center justify-center rounded-full p-2 gap-4">
+          <motion.div
+            // whileTap={{ rotate: 360 }}
+            onClick={() => handleClick()}
+            className="bg-white dark:bg-[#0D0D0D] flex flex-col items-center justify-center rounded-full p-2 gap-4"
+          >
             <div className="bg-[#34CAA5] rounded-full w-[30px] h-[30px] flex items-center justify-center cursor-pointer">
               {/* prettier-ignore */}
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
@@ -117,7 +121,7 @@ const Sidebar = () => {
             </div>
 
             {/* prettier-ignore */}
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none" className="cursor-pointer" onClick={handleClick}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none" className="cursor-pointer">
               <path d="M15 4.6875C15.2486 4.6875 15.4871 4.58873 15.6629 4.41291C15.8387 4.2371 15.9375 3.99864 15.9375 3.75V2.8125C15.9375 2.56386 15.8387 2.3254 15.6629 2.14959C15.4871 1.97377 15.2486 1.875 15 1.875C14.7514 1.875 14.5129 1.97377 14.3371 2.14959C14.1613 2.3254 14.0625 2.56386 14.0625 2.8125V3.75C14.0625 3.99864 14.1613 4.2371 14.3371 4.41291C14.5129 4.58873 14.7514 4.6875 15 4.6875Z" fill="#B2ABAB"/>
               <path d="M15 25.3125C14.7514 25.3125 14.5129 25.4113 14.3371 25.5871C14.1613 25.7629 14.0625 26.0014 14.0625 26.25V27.1875C14.0625 27.4361 14.1613 27.6746 14.3371 27.8504C14.5129 28.0262 14.7514 28.125 15 28.125C15.2486 28.125 15.4871 28.0262 15.6629 27.8504C15.8387 27.6746 15.9375 27.4361 15.9375 27.1875V26.25C15.9375 26.0014 15.8387 25.7629 15.6629 25.5871C15.4871 25.4113 15.2486 25.3125 15 25.3125Z" fill="#B2ABAB"/>
               <path d="M27.1875 14.0625H26.25C26.0014 14.0625 25.7629 14.1613 25.5871 14.3371C25.4113 14.5129 25.3125 14.7514 25.3125 15C25.3125 15.2486 25.4113 15.4871 25.5871 15.6629C25.7629 15.8387 26.0014 15.9375 26.25 15.9375H27.1875C27.4361 15.9375 27.6746 15.8387 27.8504 15.6629C28.0262 15.4871 28.125 15.2486 28.125 15C28.125 14.7514 28.0262 14.5129 27.8504 14.3371C27.6746 14.1613 27.4361 14.0625 27.1875 14.0625Z" fill="#B2ABAB"/>
@@ -128,12 +132,12 @@ const Sidebar = () => {
               <path d="M6.38185 7.70821C6.55866 7.87898 6.79548 7.97347 7.04129 7.97134C7.2871 7.9692 7.52223 7.87061 7.69605 7.69679C7.86987 7.52297 7.96847 7.28783 7.97061 7.04202C7.97274 6.79621 7.87825 6.5594 7.70747 6.38258L7.04466 5.71883C6.86875 5.54292 6.63016 5.44409 6.38138 5.44409C6.1326 5.44409 5.89401 5.54292 5.7181 5.71883C5.54219 5.89474 5.44336 6.13333 5.44336 6.38211C5.44336 6.63089 5.54219 6.86948 5.7181 7.04539L6.38185 7.70821Z" fill="#B2ABAB"/>
               <path d="M23.1567 16.3903C23.0357 16.271 22.8846 16.1867 22.7195 16.1466C22.5543 16.1065 22.3814 16.112 22.2192 16.1625C21.5901 16.3568 20.9351 16.4542 20.2767 16.4513C18.4926 16.4495 16.7821 15.7401 15.5205 14.4787C14.2589 13.2173 13.5493 11.5069 13.5473 9.72285C13.545 9.06465 13.643 8.40995 13.8379 7.78128C13.8888 7.61887 13.8945 7.44566 13.8544 7.28025C13.8144 7.11483 13.73 6.96344 13.6104 6.84232C13.4909 6.7212 13.3406 6.63492 13.1757 6.59273C13.0108 6.55055 12.8375 6.55404 12.6745 6.60285C11.2513 7.03321 9.96401 7.82507 8.9381 8.9012C7.91218 9.97733 7.18269 11.301 6.82077 12.7431C6.45885 14.1851 6.47687 15.6964 6.87306 17.1294C7.26925 18.5624 8.03008 19.8683 9.08136 20.9197C10.1326 21.9711 11.4385 22.732 12.8715 23.1283C14.3045 23.5247 15.8157 23.5428 17.2578 23.181C18.6999 22.8192 20.0236 22.0898 21.0999 21.064C22.1761 20.0382 22.9681 18.751 23.3985 17.3278C23.4473 17.1644 23.4506 16.9907 23.408 16.8255C23.3654 16.6603 23.2785 16.5098 23.1567 16.3903Z" fill="#B2ABAB"/>
             </svg>
-          </div>
+          </motion.div>
         </div>
       </div>
 
       <div className="flex flex-col gap-[16px] w-full items-center justify-center">
-        <div className="py-[8px] cursor-pointer">
+        <div className="p-[8px] rounded-full hover:bg-[#B2ABAB]/20 cursor-pointer">
           {/* prettier-ignore */}
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path d="M8.5 12H14.5" stroke="#B2ABAB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -142,7 +146,7 @@ const Sidebar = () => {
             </svg>
         </div>
 
-        <div className="py-[8px] cursor-pointer">
+        <div className="p-[8px] rounded-full hover:bg-[#B2ABAB]/20 cursor-pointer">
           {/* prettier-ignore */}
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path d="M15 12C15 10.34 13.66 9 12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C12.41 15 12.81 14.92 13.17 14.76" stroke="#B2ABAB" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -151,7 +155,7 @@ const Sidebar = () => {
             </svg>
         </div>
 
-        <div className="py-[8px] cursor-pointer">
+        <div className="p-[8px] rounded-full hover:bg-[#B2ABAB]/20 cursor-pointer">
           {/* prettier-ignore */}
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path d="M6.56 14.5599L4 11.9999L6.56 9.43994" stroke="#B2ABAB" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
