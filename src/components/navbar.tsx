@@ -7,6 +7,7 @@ import { getCurrentDateFormattedLong } from "../utils";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [unread, setUnread] = useState(true);
+  const [searchOpen, setSearchOpen] = useState(false);
 
   return (
     <>
@@ -30,8 +31,9 @@ const Navbar = () => {
           <div className="relative hidden lg:block">
             <div className="absolute inset-y-0 start-0 flex items-center ps-[16px] pointer-events-none">
               {/* prettier-ignore */}
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M8.68945 1C12.9293 1 16.3781 4.3727 16.3781 8.51907C16.3781 10.4753 15.6104 12.2595 14.3542 13.5986L16.8261 16.0109C17.0574 16.2371 17.0582 16.6031 16.8269 16.8294C16.7116 16.9436 16.5592 17 16.4076 17C16.2568 17 16.1052 16.9436 15.9892 16.8309L13.4874 14.3912C12.1714 15.4219 10.5028 16.0389 8.68945 16.0389C4.44955 16.0389 1 12.6655 1 8.51907C1 4.3727 4.44955 1 8.68945 1ZM8.68945 2.15821C5.10251 2.15821 2.18433 5.01125 2.18433 8.51907C2.18433 12.0269 5.10251 14.8807 8.68945 14.8807C12.2756 14.8807 15.1938 12.0269 15.1938 8.51907C15.1938 5.01125 12.2756 2.15821 8.68945 2.15821Z" fill="#78828A"/>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M11.5 2C16.75 2 21 6.25 21 11.5C21 16.75 16.75 21 11.5 21C6.25 21 2 16.75 2 11.5C2 7.8 4.11 4.6 7.2 3.03" stroke="#78828A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M22 22L20 20" stroke="#78828A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
             <input
@@ -135,43 +137,225 @@ const Navbar = () => {
             </DropdownContent>
           </Dropdown>
 
-          <div className="cursor-pointer hover:bg-[#B2ABAB]/10 hidden lg:flex gap-[8px] items-center justify-center border-[0.769px] dark:border-[#2F3232] border-[#DADDDD] rounded-full px-[8px] py-[4px]">
-            <img
-              src={profile}
-              alt=""
-              className="w-[38px] h-[38px] rounded-full justify-center object-cover bg-cover bg-center"
-            />
+          <Dropdown>
+            <DropdownTrigger>
+              <div className="cursor-pointer hover:bg-[#B2ABAB]/10 hidden lg:flex gap-[8px] items-center justify-center border-[0.769px] dark:border-[#2F3232] border-[#DADDDD] rounded-full px-[8px] py-[4px]">
+                <img
+                  src={profile}
+                  alt=""
+                  className="w-[38px] h-[38px] rounded-full justify-center object-cover bg-cover bg-center"
+                />
 
-            <div className="flex gap-[1px] flex-col items-end justify-center inter">
-              <h3 className="text-base text-[#26282C] dark:text-[#D3D5D9]">
-                Justin Bergson
-              </h3>
-              <h4 className="text-sm text-[#787486] dark:text-[#787486]">
-                Justin@gmail.com
-              </h4>
-            </div>
+                <div className="flex gap-[1px] flex-col items-end justify-center inter">
+                  <h3 className="text-base text-[#26282C] dark:text-[#D3D5D9]">
+                    Justin Bergson
+                  </h3>
+                  <h4 className="text-sm text-[#787486] dark:text-[#787486]">
+                    Justin@gmail.com
+                  </h4>
+                </div>
 
-            {/* prettier-ignore */}
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" className="pl-2 w-fit fill-[#0D062D] dark:fill-[#D9D2F9]">
+                {/* prettier-ignore */}
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" className="pl-2 w-fit fill-[#0D062D] dark:fill-[#D9D2F9]">
             <path d="M3.19841 6.20675C3.43891 5.95614 3.81525 5.93336 4.08045 6.1384L4.15643 6.20675L10 12.2955L15.8436 6.20675C16.0841 5.95614 16.4604 5.93336 16.7256 6.1384L16.8016 6.20675C17.0421 6.45735 17.064 6.84951 16.8672 7.12585L16.8016 7.20502L10.479 13.7933C10.2385 14.0439 9.86217 14.0666 9.59697 13.8616L9.52099 13.7933L3.19841 7.20502C2.93386 6.92935 2.93386 6.48241 3.19841 6.20675Z"/>
             </svg>
-          </div>
+              </div>
+            </DropdownTrigger>
+
+            <DropdownContent className="bg-white dark:bg-[#0D0D0D] opacity-100 group-hover:opacity-100 border absolute right-[-0px] top-[62px] z-30 rounded-[14px] w-[250px]  border-[#E1DFDF] dark:border-[#2D2A2A] flex items-center justify-center flex-col">
+              <div
+                className={`flex px-3 gap-5 items-center justify-start w-full bg-transparent cursor-pointer hover:bg-[#B2ABAB]/10 py-4 border-b border-[#E1DFDF]/50 dark:border-[#2D2A2A]/50 rounded-t-[14px] `}
+              >
+                {/* prettier-ignore */}
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                  <path className="stroke-[#B2ABAB]" d="M14.9405 8.03998C15.1605 8.47998 15.2905 8.97998 15.2905 9.50998C15.2805 11.28 13.8905 12.73 12.1305 12.78C12.0605 12.77 11.9705 12.77 11.8905 12.78C10.1305 12.72 8.73047 11.28 8.73047 9.50998C8.73047 7.69998 10.1905 6.22998 12.0105 6.22998" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path className="stroke-[#B2ABAB]" d="M18.7398 19.3801C16.9598 21.0101 14.5998 22.0001 11.9998 22.0001C9.39977 22.0001 7.03977 21.0101 5.25977 19.3801C5.35977 18.4401 5.95977 17.5201 7.02977 16.8001C9.76977 14.9801 14.2498 14.9801 16.9698 16.8001C18.0398 17.5201 18.6398 18.4401 18.7398 19.3801Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path className="stroke-[#B2ABAB]" d="M4 6C2.75 7.67 2 9.75 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2C10.57 2 9.2 2.3 7.97 2.85"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+
+                <h3 className="text-[#B2ABAB] text-sm font-medium">Profile</h3>
+              </div>
+
+              <div
+                className={`flex px-3 gap-5 items-center justify-start w-full bg-transparent cursor-pointer hover:bg-[#B2ABAB]/10 py-4 border-b border-[#E1DFDF]/50 dark:border-[#2D2A2A]/50`}
+              >
+                {/* prettier-ignore */}
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                <path d="M15 12C15 10.34 13.66 9 12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C12.41 15 12.81 14.92 13.17 14.76" stroke="#B2ABAB" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6.87988 20.5799L7.96988 21.2099C8.75988 21.6799 9.77988 21.3999 10.2499 20.6099L10.3599 20.4199C11.2599 18.8499 12.7399 18.8499 13.6499 20.4199L13.7599 20.6099C14.2299 21.3999 15.2499 21.6799 16.0399 21.2099L17.7699 20.2199C18.6799 19.6999 18.9899 18.5299 18.4699 17.6299C17.5599 16.0599 18.2999 14.7799 20.1099 14.7799C21.1499 14.7799 22.0099 13.9299 22.0099 12.8799V11.1199C22.0099 10.0799 21.1599 9.21995 20.1099 9.21995C19.0999 9.21995 18.4199 8.81995 18.1799 8.18995C17.9899 7.69995 18.0699 7.05995 18.4699 6.36995C18.9899 5.45995 18.6799 4.29995 17.7699 3.77995L16.9599 3.31995" stroke="#B2ABAB" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13.64 3.58006C12.74 5.15006 11.26 5.15006 10.35 3.58006L10.24 3.39006C9.78 2.60006 8.76 2.32006 7.97 2.79006L6.24 3.78006C5.33 4.30006 5.02 5.47006 5.54 6.38006C6.45 7.94006 5.71 9.22006 3.9 9.22006C2.86 9.22006 2 10.0701 2 11.1201V12.8801C2 13.9201 2.85 14.7801 3.9 14.7801C5.71 14.7801 6.45 16.0601 5.54 17.6301" stroke="#B2ABAB" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+
+                <h3 className="text-[#B2ABAB] text-sm font-medium">Settings</h3>
+              </div>
+
+              <div className="flex flex-col items-start justify-center w-full gap-2 pt-4 border-b border-[#E1DFDF]/50 dark:border-[#2D2A2A]/50">
+                <div className="flex gap-5 items-center px-3">
+                  <img
+                    src={profile}
+                    alt=""
+                    className="w-[20px] h-[20px] rounded-full justify-center object-cover bg-cover bg-center"
+                  />
+
+                  <div className="flex gap-[1px] flex-col items-start justify-center inter">
+                    <h3 className="text-sm lg:text-base text-[#26282C] dark:text-[#D3D5D9]">
+                      Justin Bergson
+                    </h3>
+                    <h4 className="text-xs lg:text-sm text-[#787486] dark:text-[#787486]">
+                      Justin@gmail.com
+                    </h4>
+                  </div>
+                </div>
+
+                <div
+                  className={`flex px-3 gap-5 items-center justify-start w-full bg-transparent cursor-pointer hover:bg-[#B2ABAB]/10 py-4`}
+                >
+                  {/* prettier-ignore */}
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                    <path className="fill-[#B2ABAB]" d="M18 12.75H6C5.59 12.75 5.25 12.41 5.25 12C5.25 11.59 5.59 11.25 6 11.25H18C18.41 11.25 18.75 11.59 18.75 12C18.75 12.41 18.41 12.75 18 12.75Z" />
+                    <path className="fill-[#B2ABAB]" d="M12 18.75C11.59 18.75 11.25 18.41 11.25 18V6C11.25 5.59 11.59 5.25 12 5.25C12.41 5.25 12.75 5.59 12.75 6V18C12.75 18.41 12.41 18.75 12 18.75Z" />
+                  </svg>
+
+                  <h3 className="text-[#B2ABAB] text-sm font-medium">
+                    Add Account
+                  </h3>
+                </div>
+              </div>
+
+              <div
+                className={`flex px-3 gap-5 items-center justify-start w-full bg-transparent cursor-pointer hover:bg-[#B2ABAB]/10 py-4 rounded-b-[14px]`}
+              >
+                {/* prettier-ignore */}
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                <path d="M6.56 14.5599L4 11.9999L6.56 9.43994" stroke="#B2ABAB" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9.23982 12H4.06982" stroke="#B2ABAB" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14.2398 12H12.2798" stroke="#B2ABAB" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18.01 6.47998C19.25 7.83998 20 9.70998 20 12C20 17 16.42 20 12 20" stroke="#B2ABAB" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 4C13.05 4 14.05 4.17 14.97 4.49" stroke="#B2ABAB" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+
+                <h3 className="text-[#B2ABAB] text-sm font-medium">Log Out</h3>
+              </div>
+            </DropdownContent>
+          </Dropdown>
 
           <div className="flex lg:hidden gap-5 items-center justify-center">
-            <div className="cursor-pointer hover:bg-[#B2ABAB]/10 flex gap-[8px] items-center justify-center border-[0.769px] border-[#DADDDD] dark:border-[#262626] rounded-full px-[16px] py-[16px]">
-              {/* prettier-ignore */}
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M8.68945 1C12.9293 1 16.3781 4.3727 16.3781 8.51907C16.3781 10.4753 15.6104 12.2595 14.3542 13.5986L16.8261 16.0109C17.0574 16.2371 17.0582 16.6031 16.8269 16.8294C16.7116 16.9436 16.5592 17 16.4076 17C16.2568 17 16.1052 16.9436 15.9892 16.8309L13.4874 14.3912C12.1714 15.4219 10.5028 16.0389 8.68945 16.0389C4.44955 16.0389 1 12.6655 1 8.51907C1 4.3727 4.44955 1 8.68945 1ZM8.68945 2.15821C5.10251 2.15821 2.18433 5.01125 2.18433 8.51907C2.18433 12.0269 5.10251 14.8807 8.68945 14.8807C12.2756 14.8807 15.1938 12.0269 15.1938 8.51907C15.1938 5.01125 12.2756 2.15821 8.68945 2.15821Z" fill="#78828A"/>
+            <div
+              className="relative block"
+              onClick={() => setSearchOpen(!searchOpen)}
+            >
+              <div className="absolute inset-y-0 start-0 flex items-center ps-[16px] pointer-events-none">
+                {/* prettier-ignore */}
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M11.5 2C16.75 2 21 6.25 21 11.5C21 16.75 16.75 21 11.5 21C6.25 21 2 16.75 2 11.5C2 7.8 4.11 4.6 7.2 3.03" stroke="#78828A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M22 22L20 20" stroke="#78828A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-            </div>
-
-            <div className="cursor-pointer hover:bg-[#B2ABAB]/10 flex gap-[8px] items-center justify-center border-[0.769px] border-[#DADDDD] dark:border-[#262626] rounded-full px-[6px] py-[6px]">
-              <img
-                src={profile}
-                alt=""
-                className="w-[38px] h-[38px] rounded-full justify-center object-cover bg-cover bg-center"
+              </div>
+              <input
+                type="text"
+                className={`block ${
+                  searchOpen
+                    ? "w-[250px] ps-10 bg-white dark:bg-[#0D0D0D]"
+                    : "w-[10px] ps-9 cursor-pointer bg-transparent"
+                } hover:bg-[#B2ABAB]/10 dark:hover:bg-[#B2ABAB]/10 xl:w-[333px] p-3  text-sm dark:text-[#A3A3A3] text-[#A3A3A3] border border-[#DADDDD] rounded-[24px] dark:border-[#2E3232] placeholder:text-[#A3A3A3] dark:placeholder:text-[#A3A3A3] outline-none`}
+                placeholder="Search..."
+                required
               />
             </div>
+
+            <Dropdown>
+              <DropdownTrigger>
+                <div className="cursor-pointer hover:bg-[#B2ABAB]/10 flex gap-[8px] items-center justify-center border-[0.769px] border-[#DADDDD] dark:border-[#262626] rounded-full px-[6px] py-[6px]">
+                  <img
+                    src={profile}
+                    alt=""
+                    className="w-[38px] h-[38px] rounded-full justify-center object-cover bg-cover bg-center"
+                  />
+                </div>
+              </DropdownTrigger>
+
+              <DropdownContent className="bg-white dark:bg-[#0D0D0D] opacity-100 group-hover:opacity-100 border absolute right-[-0px] top-[58px] z-30 rounded-[14px] w-[250px]  border-[#E1DFDF] dark:border-[#2D2A2A] flex items-center justify-center flex-col">
+                <div
+                  className={`flex px-3 gap-5 items-center justify-start w-full bg-transparent cursor-pointer hover:bg-[#B2ABAB]/10 py-4 border-b border-[#E1DFDF]/50 dark:border-[#2D2A2A]/50 rounded-t-[14px] `}
+                >
+                  {/* prettier-ignore */}
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                  <path className="stroke-[#B2ABAB]" d="M14.9405 8.03998C15.1605 8.47998 15.2905 8.97998 15.2905 9.50998C15.2805 11.28 13.8905 12.73 12.1305 12.78C12.0605 12.77 11.9705 12.77 11.8905 12.78C10.1305 12.72 8.73047 11.28 8.73047 9.50998C8.73047 7.69998 10.1905 6.22998 12.0105 6.22998" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path className="stroke-[#B2ABAB]" d="M18.7398 19.3801C16.9598 21.0101 14.5998 22.0001 11.9998 22.0001C9.39977 22.0001 7.03977 21.0101 5.25977 19.3801C5.35977 18.4401 5.95977 17.5201 7.02977 16.8001C9.76977 14.9801 14.2498 14.9801 16.9698 16.8001C18.0398 17.5201 18.6398 18.4401 18.7398 19.3801Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path className="stroke-[#B2ABAB]" d="M4 6C2.75 7.67 2 9.75 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2C10.57 2 9.2 2.3 7.97 2.85"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+
+                  <h3 className="text-[#B2ABAB] text-sm font-medium">
+                    Profile
+                  </h3>
+                </div>
+
+                <div
+                  className={`flex px-3 gap-5 items-center justify-start w-full bg-transparent cursor-pointer hover:bg-[#B2ABAB]/10 py-4 border-b border-[#E1DFDF]/50 dark:border-[#2D2A2A]/50`}
+                >
+                  {/* prettier-ignore */}
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                <path d="M15 12C15 10.34 13.66 9 12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C12.41 15 12.81 14.92 13.17 14.76" stroke="#B2ABAB" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6.87988 20.5799L7.96988 21.2099C8.75988 21.6799 9.77988 21.3999 10.2499 20.6099L10.3599 20.4199C11.2599 18.8499 12.7399 18.8499 13.6499 20.4199L13.7599 20.6099C14.2299 21.3999 15.2499 21.6799 16.0399 21.2099L17.7699 20.2199C18.6799 19.6999 18.9899 18.5299 18.4699 17.6299C17.5599 16.0599 18.2999 14.7799 20.1099 14.7799C21.1499 14.7799 22.0099 13.9299 22.0099 12.8799V11.1199C22.0099 10.0799 21.1599 9.21995 20.1099 9.21995C19.0999 9.21995 18.4199 8.81995 18.1799 8.18995C17.9899 7.69995 18.0699 7.05995 18.4699 6.36995C18.9899 5.45995 18.6799 4.29995 17.7699 3.77995L16.9599 3.31995" stroke="#B2ABAB" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13.64 3.58006C12.74 5.15006 11.26 5.15006 10.35 3.58006L10.24 3.39006C9.78 2.60006 8.76 2.32006 7.97 2.79006L6.24 3.78006C5.33 4.30006 5.02 5.47006 5.54 6.38006C6.45 7.94006 5.71 9.22006 3.9 9.22006C2.86 9.22006 2 10.0701 2 11.1201V12.8801C2 13.9201 2.85 14.7801 3.9 14.7801C5.71 14.7801 6.45 16.0601 5.54 17.6301" stroke="#B2ABAB" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+
+                  <h3 className="text-[#B2ABAB] text-sm font-medium">
+                    Settings
+                  </h3>
+                </div>
+
+                <div className="flex flex-col items-start justify-center w-full gap-2 pt-4 border-b border-[#E1DFDF]/50 dark:border-[#2D2A2A]/50">
+                  <div className="flex gap-5 items-center px-3">
+                    <img
+                      src={profile}
+                      alt=""
+                      className="w-[20px] h-[20px] rounded-full justify-center object-cover bg-cover bg-center"
+                    />
+
+                    <div className="flex gap-[1px] flex-col items-start justify-center inter">
+                      <h3 className="text-sm lg:text-base text-[#26282C] dark:text-[#D3D5D9]">
+                        Justin Bergson
+                      </h3>
+                      <h4 className="text-xs lg:text-sm text-[#787486] dark:text-[#787486]">
+                        Justin@gmail.com
+                      </h4>
+                    </div>
+                  </div>
+
+                  <div
+                    className={`flex px-3 gap-5 items-center justify-start w-full bg-transparent cursor-pointer hover:bg-[#B2ABAB]/10 py-4`}
+                  >
+                    {/* prettier-ignore */}
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                    <path className="fill-[#B2ABAB]" d="M18 12.75H6C5.59 12.75 5.25 12.41 5.25 12C5.25 11.59 5.59 11.25 6 11.25H18C18.41 11.25 18.75 11.59 18.75 12C18.75 12.41 18.41 12.75 18 12.75Z" />
+                    <path className="fill-[#B2ABAB]" d="M12 18.75C11.59 18.75 11.25 18.41 11.25 18V6C11.25 5.59 11.59 5.25 12 5.25C12.41 5.25 12.75 5.59 12.75 6V18C12.75 18.41 12.41 18.75 12 18.75Z" />
+                  </svg>
+
+                    <h3 className="text-[#B2ABAB] text-sm font-medium">
+                      Add Account
+                    </h3>
+                  </div>
+                </div>
+
+                <div
+                  className={`flex px-3 gap-5 items-center justify-start w-full bg-transparent cursor-pointer hover:bg-[#B2ABAB]/10 py-4 rounded-b-[14px]`}
+                >
+                  {/* prettier-ignore */}
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                <path d="M6.56 14.5599L4 11.9999L6.56 9.43994" stroke="#B2ABAB" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9.23982 12H4.06982" stroke="#B2ABAB" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14.2398 12H12.2798" stroke="#B2ABAB" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18.01 6.47998C19.25 7.83998 20 9.70998 20 12C20 17 16.42 20 12 20" stroke="#B2ABAB" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 4C13.05 4 14.05 4.17 14.97 4.49" stroke="#B2ABAB" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+
+                  <h3 className="text-[#B2ABAB] text-sm font-medium">
+                    Log Out
+                  </h3>
+                </div>
+              </DropdownContent>
+            </Dropdown>
           </div>
         </div>
       </nav>
