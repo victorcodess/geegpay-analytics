@@ -1,8 +1,12 @@
 import { motion } from "framer-motion";
+import ThemeContext from "../ThemeContext";
+import { useContext } from "react";
 
 const Sidebar = () => {
+  const { theme, setTheme } = useContext(ThemeContext);
+
   function handleClick() {
-    if (localStorage.theme === "dark" || !("theme" in localStorage)) {
+    if (theme === "light") {
       //add class=dark in html element
       document.documentElement.classList.add("dark");
     } else {
@@ -10,10 +14,10 @@ const Sidebar = () => {
       document.documentElement.classList.remove("dark");
     }
 
-    if (localStorage.theme === "dark") {
-      localStorage.theme = "light";
+    if (theme === "dark") {
+      setTheme("light");
     } else {
-      localStorage.theme = "dark";
+      setTheme("dark");
     }
   }
 
@@ -94,7 +98,6 @@ const Sidebar = () => {
           </div>
 
           <motion.div
-            // whileTap={{ rotate: 360 }}
             onClick={() => handleClick()}
             className="bg-white dark:bg-[#0D0D0D] flex flex-col items-center justify-center rounded-full p-2 gap-4"
           >

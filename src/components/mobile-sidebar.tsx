@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Dropdown, { DropdownContent, DropdownTrigger } from "./dropdown";
-import { getCurrentDateFormattedShort } from "../utils";
+import { getCurrentDateFormattedShort } from "../utils/utils";
 const MobileSidebar = () => {
   //   const [dark, setDark] = useState(false);
   const dark = false;
@@ -23,16 +23,6 @@ const MobileSidebar = () => {
     }
   }
 
-  useEffect(() => {
-    // function handleToggle() {
-    if (!dark) {
-      //   handleClick();
-    } else {
-      //   handleClick();
-    }
-    // setDark(!dark);
-    //   }
-  }, [dark]);
 
   return (
     <div className="h-[100vh] w-[300px] fixed flex py-5 bg-[#F7F8FA] dark:bg-[#131313] flex-col items-start justify-between gap-[28px]">
@@ -166,7 +156,7 @@ const MobileSidebar = () => {
               <path d="M14.5 9.5H16.5V11.5" stroke="#B2ABAB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
 
-            <h3 className="text-[#B2ABAB] text-md font-medium">Trends</h3>
+            <h3 className="text-[#B2ABAB] text-base font-medium">Trends</h3>
           </div>
 
           <div className="py-[8px] cursor-pointer flex gap-5 ml-3 pl-2 pr-6 rounded-lg hover:bg-[#B2ABAB]/10">
@@ -178,7 +168,7 @@ const MobileSidebar = () => {
               <path d="M18.3398 20C19.0598 19.85 19.7398 19.56 20.2998 19.13C21.8598 17.96 21.8598 16.03 20.2998 14.86C19.7498 14.44 19.0798 14.16 18.3698 14" stroke="#B2ABAB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
 
-            <h3 className="text-[#B2ABAB] text-md font-medium">Customers</h3>
+            <h3 className="text-[#B2ABAB] text-base font-medium">Customers</h3>
           </div>
 
           <div className="py-[8px] cursor-pointer flex gap-5 ml-3 pl-2 pr-6 rounded-lg hover:bg-[#B2ABAB]/10">
@@ -190,7 +180,7 @@ const MobileSidebar = () => {
               <path d="M16.9998 13.24V9.58002L10.9297 6.07001L9.87976 5.46997L7.50977 4.09998" stroke="#B7B0B0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
 
-            <h3 className="text-[#B2ABAB] text-md font-medium">Inventory</h3>
+            <h3 className="text-[#B2ABAB] text-base font-medium">Inventory</h3>
           </div>
 
           <div className="py-[8px] cursor-pointer flex gap-5 ml-3 pl-2 pr-6 rounded-lg hover:bg-[#B2ABAB]/10">
@@ -203,7 +193,7 @@ const MobileSidebar = () => {
               <path d="M9.49451 9.5H9.50349" stroke="#B2ABAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
 
-            <h3 className="text-[#B2ABAB] text-md font-medium">Discounts</h3>
+            <h3 className="text-[#B2ABAB] text-base font-medium">Discounts</h3>
           </div>
 
           <div className="py-[8px] cursor-pointer flex gap-5 ml-3 pl-2 pr-6 rounded-lg hover:bg-[#B2ABAB]/10">
@@ -214,7 +204,7 @@ const MobileSidebar = () => {
               <path d="M11.9946 16H12.0036" stroke="#B2ABAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
 
-            <h3 className="text-[#B2ABAB] text-md font-medium">Details</h3>
+            <h3 className="text-[#B2ABAB] text-base font-medium">Details</h3>
           </div>
 
           <motion.div
@@ -277,7 +267,7 @@ const MobileSidebar = () => {
                 <path d="M4 6C2.75 7.67 2 9.75 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2C10.57 2 9.2 2.3 7.97 2.85" stroke="#B2ABAB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
 
-          <h3 className="text-[#B2ABAB] text-md font-medium">Last Orders</h3>
+          <h3 className="text-[#B2ABAB] text-base font-medium">Last Orders</h3>
         </div>
 
         <div className="py-[8px] cursor-pointer flex gap-5 pl-2 pr-6 rounded-lg hover:bg-[#B2ABAB]/10">
@@ -288,7 +278,7 @@ const MobileSidebar = () => {
                 <path d="M13.64 3.58006C12.74 5.15006 11.26 5.15006 10.35 3.58006L10.24 3.39006C9.78 2.60006 8.76 2.32006 7.97 2.79006L6.24 3.78006C5.33 4.30006 5.02 5.47006 5.54 6.38006C6.45 7.94006 5.71 9.22006 3.9 9.22006C2.86 9.22006 2 10.0701 2 11.1201V12.8801C2 13.9201 2.85 14.7801 3.9 14.7801C5.71 14.7801 6.45 16.0601 5.54 17.6301" stroke="#B2ABAB" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
 
-          <h3 className="text-[#B2ABAB] text-md font-medium">Settings</h3>
+          <h3 className="text-[#B2ABAB] text-base font-medium">Settings</h3>
         </div>
 
         <div className="py-[8px] cursor-pointer flex gap-5 pl-2 pr-6 rounded-lg hover:bg-[#B2ABAB]/10">
@@ -301,7 +291,7 @@ const MobileSidebar = () => {
                 <path d="M12 4C13.05 4 14.05 4.17 14.97 4.49" stroke="#B2ABAB" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
 
-          <h3 className="text-[#B2ABAB] text-md font-medium">Log Out</h3>
+          <h3 className="text-[#B2ABAB] text-base font-medium">Log Out</h3>
         </div>
       </div>
     </div>

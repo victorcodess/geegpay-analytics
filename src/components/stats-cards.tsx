@@ -1,8 +1,16 @@
+import { motion } from "framer-motion";
 
 const StatsCard = () => {
   return (
-    <div className="grid w-full max-w-[1200px] grid-cols-1 grid-rows-4 place-content-center place-items-center gap-x-4 gap-y-4 lg:grid-cols-2 lg:grid-rows-2">
-      <div className="bg-white dark:bg-[#0D0D0D] border flex flex-col rounded-[14px] border-[#EDF2F7] dark:border-[#1A1A1A] w-full p-4 gap-2.5">
+    <div className="grid w-full max-w-[1200px] grid-cols-1 grid-rows-4 place-content-center place-items-center gap-x-4 gap-y-4 sm:grid-cols-2 sm:grid-rows-2 lg:grid-cols-2 lg:grid-rows-2">
+      <motion.div
+        whileHover={{ scale: 1.04 }}
+        transition={{
+          duration: 0.1,
+          ease: [0, 0.71, 0.2, 1.01],
+        }}
+        className="bg-white cursor-pointer dark:bg-[#0D0D0D] border flex flex-col rounded-[14px] border-[#EDF2F7] dark:border-[#1A1A1A] w-full p-4 gap-2.5"
+      >
         <div className="flex w-full justify-between items-center">
           <div className="border border-[#DADDDD] dark:border-[#262626] flex items-center justify-center rounded-full w-10 h-10">
             {/* prettier-ignore */}
@@ -32,7 +40,7 @@ const StatsCard = () => {
         </div>
 
         <div className="flex flex-col gap-[5px]">
-          <h2 className="text-[#898989] font-medium  text-md lg:text-lg  leading-[26px]">
+          <h2 className="text-[#898989] font-medium  text-base lg:text-lg  leading-[26px]">
             Total Order
           </h2>
           <h1 className="font-semibold text-[#3A3F51] text-2xl leading-[32px]">
@@ -55,9 +63,16 @@ const StatsCard = () => {
 
           <h4 className="inter text-[#606060] text-sm">vs. previous month</h4>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="bg-white dark:bg-[#0D0D0D] border flex flex-col rounded-[14px] border-[#EDF2F7] dark:border-[#1A1A1A] w-full p-4 gap-2.5">
+      <motion.div
+        whileHover={{ scale: 1.04 }}
+        transition={{
+          duration: 0.1,
+          ease: [0, 0.71, 0.2, 1.01],
+        }}
+        className="bg-white cursor-pointer dark:bg-[#0D0D0D] border flex flex-col rounded-[14px] border-[#EDF2F7] dark:border-[#1A1A1A] w-full p-4 gap-2.5"
+      >
         <div className="flex w-full justify-between items-center">
           <div className="border border-[#DADDDD] dark:border-[#262626] flex items-center justify-center rounded-full w-10 h-10">
             {/* prettier-ignore */}
@@ -91,7 +106,7 @@ const StatsCard = () => {
         </div>
 
         <div className="flex flex-col gap-[5px]">
-          <h2 className="text-[#898989] font-medium  text-md lg:text-lg  leading-[26px]">
+          <h2 className="text-[#898989] font-medium  text-base lg:text-lg  leading-[26px]">
             Total Refund
           </h2>
           <h1 className="font-semibold text-[#3A3F51] text-2xl leading-[32px]">
@@ -114,9 +129,16 @@ const StatsCard = () => {
 
           <h4 className="inter text-[#606060] text-sm">vs. previous month</h4>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="bg-white dark:bg-[#0D0D0D] border flex flex-col rounded-[14px] border-[#EDF2F7] dark:border-[#1A1A1A] w-full p-4 gap-2.5">
+      <motion.div
+        whileHover={{ scale: 1.04 }}
+        transition={{
+          duration: 0.1,
+          ease: [0, 0.71, 0.2, 1.01],
+        }}
+        className="bg-white cursor-pointer dark:bg-[#0D0D0D] border flex flex-col rounded-[14px] border-[#EDF2F7] dark:border-[#1A1A1A] w-full p-4 gap-2.5"
+      >
         <div className="flex w-full justify-between items-center">
           <div className="border border-[#DADDDD] dark:border-[#262626] flex items-center justify-center rounded-full w-10 h-10">
             {/* prettier-ignore */}
@@ -146,7 +168,7 @@ const StatsCard = () => {
         </div>
 
         <div className="flex flex-col gap-[5px]">
-          <h2 className="text-[#898989] font-medium  text-md lg:text-lg  leading-[26px]">
+          <h2 className="text-[#898989] font-medium  text-base lg:text-lg  leading-[26px]">
             Average Sales
           </h2>
           <h1 className="font-semibold text-[#3A3F51] text-2xl leading-[32px]">
@@ -169,9 +191,16 @@ const StatsCard = () => {
 
           <h4 className="inter text-[#606060] text-sm">vs. previous month</h4>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="bg-white dark:bg-[#0D0D0D] border flex flex-col rounded-[14px] border-[#EDF2F7] dark:border-[#1A1A1A] w-full p-4 gap-2.5">
+      <motion.div
+        whileHover={{ scale: 1.04 }}
+        transition={{
+          duration: 0.1,
+          ease: [0, 0.71, 0.2, 1.01],
+        }}
+        className="bg-white cursor-pointer dark:bg-[#0D0D0D] border flex flex-col rounded-[14px] border-[#EDF2F7] dark:border-[#1A1A1A] w-full p-4 gap-2.5"
+      >
         <div className="flex w-full justify-between items-center">
           <div className="border border-[#DADDDD] dark:border-[#262626] flex items-center justify-center rounded-full w-10 h-10">
             {/* prettier-ignore */}
@@ -200,7 +229,7 @@ const StatsCard = () => {
         </div>
 
         <div className="flex flex-col gap-[5px]">
-          <h2 className="text-[#898989] font-medium  text-md lg:text-lg  leading-[26px]">
+          <h2 className="text-[#898989] font-medium  text-base lg:text-lg  leading-[26px]">
             Total Income
           </h2>
           <h1 className="font-semibold text-[#3A3F51] text-2xl leading-[32px]">
@@ -223,7 +252,7 @@ const StatsCard = () => {
 
           <h4 className="inter text-[#606060] text-sm">vs. previous month</h4>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

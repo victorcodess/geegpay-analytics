@@ -2,7 +2,7 @@ import { useState } from "react";
 import profile from "../assets/profile.jpeg";
 import MobileSidebar from "./mobile-sidebar";
 import Dropdown, { DropdownContent, DropdownTrigger } from "./dropdown";
-import { getCurrentDateFormattedLong } from "../utils";
+import { getCurrentDateFormattedLong } from "../utils/utils";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -239,7 +239,7 @@ const Navbar = () => {
             </DropdownContent>
           </Dropdown>
 
-          <div className="flex lg:hidden gap-5 items-center justify-center">
+          <div className="flex lg:hidden gap-5 items-center justify-center w-full">
             <div
               className="relative block"
               onClick={() => setSearchOpen(!searchOpen)}
@@ -255,7 +255,7 @@ const Navbar = () => {
                 type="text"
                 className={`block ${
                   searchOpen
-                    ? "w-[250px] ps-10 bg-white dark:bg-[#0D0D0D]"
+                    ? "w-[150px] sm:w-[349px] ps-10 bg-white dark:bg-[#0D0D0D]"
                     : "w-[10px] ps-9 cursor-pointer bg-transparent"
                 } hover:bg-[#B2ABAB]/10 dark:hover:bg-[#B2ABAB]/10 xl:w-[333px] p-3  text-sm dark:text-[#A3A3A3] text-[#A3A3A3] border border-[#DADDDD] rounded-[24px] dark:border-[#2E3232] placeholder:text-[#A3A3A3] dark:placeholder:text-[#A3A3A3] outline-none`}
                 placeholder="Search..."
@@ -265,11 +265,11 @@ const Navbar = () => {
 
             <Dropdown>
               <DropdownTrigger>
-                <div className="cursor-pointer hover:bg-[#B2ABAB]/10 flex gap-[8px] items-center justify-center border-[0.769px] border-[#DADDDD] dark:border-[#262626] rounded-full px-[6px] py-[6px]">
+                <div className="cursor-pointer hover:bg-[#B2ABAB]/10 min-w-min flex gap-[8px] items-center justify-center border-[0.769px] border-[#DADDDD] dark:border-[#262626] rounded-full px-[6px] py-[6px]">
                   <img
                     src={profile}
                     alt=""
-                    className="w-[38px] h-[38px] rounded-full justify-center object-cover bg-cover bg-center"
+                    className="w-[38px] h-[38px]  rounded-full justify-center object-cover bg-cover bg-center"
                   />
                 </div>
               </DropdownTrigger>
