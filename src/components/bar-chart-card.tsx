@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Dropdown, { DropdownContent, DropdownTrigger } from "./dropdown";
 import { useState } from "react";
-import Chart from "./bar-chart";
+// import Chart from "./bar-chart";
 
 const BarChartCard = () => {
   const [option, setOption] = useState("Weekly");
@@ -71,11 +71,11 @@ const BarChartCard = () => {
         </div>
       </div>
 
-      <div className="px-5 pb-5">
+      {/* <div className="px-5 pb-5">
         <Chart />
-      </div>
+      </div> */}
 
-      <div className="hidden flex-col gap-[12px] pb-[16px]">
+      <div className="flex-col gap-[12px] pb-[16px]">
         <div className="px-[20px] flex gap-6 items-center justify-center">
           <div className="h-[255px] w-fit text-[#525252] text-[10px] sm:text-xs lg:text-xs flex flex-col font-semibold justify-between">
             <h5>50.000</h5>
